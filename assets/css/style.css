@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Sgt Pepper';
+    src: url('../fonts/SgtPeppersOutline.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+}
+
+html, 
+body {
+    padding: 0px;
+    padding-bottom: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #cccccc;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    font-family: 'Josefin Sans';
+}
+
+.jumbotron {
+    height: 250px;
+    padding: 35px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    text-align: center;
+    background-image: url("../images/banner_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Sgt Pepper', sans-serif;
+}
+
+.answers {
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    padding-top: 0px;
+}
+
+.buttons {
+    padding: 10px;
+    background-color: #F2C135;
+    color: #A6ECD9;
+    border: none;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    opacity: 1;
+}
+
+.buttons:active {
+    outline-color: #F2C135;
+}
+
+#header {
+    padding: 50px;
+    vertical-align: center;
+    color: white;
+}
+
+#quiz {
+    display: block;
+    padding: 30px;
+    background: rgba(64, 224, 208, .5);
+    color: #F2C135;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#start {
+    height: 65vh;
+    display: block;
+    padding: 30px;
+    padding-top: 30vh;
+    background: rgba(64, 224, 208, .5);
+    text-align: center;
+}
+
+#stats {
+    height: 65vh;
+    display: block;
+    padding: 30px;
+    padding-top: 125px;
+    background: rgba(64, 224, 208, .5);
+    color: #F2C135;
+    text-align: center;
+}
+

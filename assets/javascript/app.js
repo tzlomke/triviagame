@@ -85,29 +85,31 @@ var questions = [{
         correctAnswer: "d"
     },
     {
-        question: "On which Beatles song did Eric Clapton play lead guitar?",
+        question: "Which Beatles song featured Eric Clapton on lead guitar?",
         answers: {
-            a: "While My Guitar Gently Weeps",
-            b: "Here Comes the Sun",
-            c: "Norwegian Wood",
-            d: "Blackbird"
+            a: "'While My Guitar Gently Weeps'",
+            b: "'Here Comes the Sun'",
+            c: "'Norwegian Wood'",
+            d: "'Blackbird'"
         },
         correctAnswer: "a"
     },
     {
         question: "Which song from the album <em>Sgt. Pepper's Lonely Hearts Club Band</em> was banned by the BBC due to lyrical content that could 'encourage a permissive attitude towards drug-taking'?",
         answers: {
-            a: "A Day in the Life",
-            b: "Lucy in the Sky with Diamonds",
-            c: "Getting Better",
-            d: "Fixing a Hole"
+            a: "'A Day in the Life'",
+            b: "'Lucy in the Sky with Diamonds'",
+            c: "'Getting Better'",
+            d: "'Fixing a Hole'"
         },
         correctAnswer: "a"
-    }]
+    }
+]
 
 // Document Ready
 $(document).ready(function () {
 
+    // Hides Quiz and Stats DOM Elements
     $("#quiz").hide();
     $("#stats").hide();
 
@@ -127,25 +129,25 @@ $(document).ready(function () {
                 // Create Radio Buttons
                 answers.push(
                     "<label>" +
-                    "<input type='radio' name=question" + i + " value=" + letter + ">" +
+                    "<input type='radio' name=question" + i + " value=" + letter + "> " +
                     questions[i].answers[letter] +
-                    "</label><br><br>"
+                    "</label><br>"
                 )
             }
 
             // Push Questions and Possible Answers to Output
             output.push(
                 "<div class='question'><h2>" + questions[i].question + "</h2></div>" +
-                "<div class='answers'>" + answers.join(" ") + "</div>"
+                "<div class='answers'>" + answers.join(" ") + "</div><br>"
             )
         }
 
-        // Append to DOM Element
-        $("#quiz").append(output.join("") + "<br>" + "<button type='button' id='done'>DONE</button>");
+        // Append Output to DOM Element
+        $("#quiz").append(output.join(" ") + "<br>" + "<button type='button' class='buttons' id='done'>DONE</button>");
     }
 
     // Quiz Start
-    $("#start").on("click", function () {
+    $("#start").off("click").on("click", function () {
 
         // Generate Quiz
         generateQuiz()
@@ -158,9 +160,6 @@ $(document).ready(function () {
         function scoreQuiz() {
             for (i = 0; i < questions.length; i++) {
 
-                console.log(questions[i].correctAnswer);
-                console.log($("input[name=question" + i + "]:checked").val());
-
                 if ($("input[name=question" + i + "]").is(":checked")) {
                     if ($("input[name=question" + i + "]:checked").val() === questions[i].correctAnswer) {
                         right++;
@@ -169,7 +168,7 @@ $(document).ready(function () {
                     }
                 } else {
                     unanswered++;
-                }                 
+                }
             }
 
             // Write Results to DOM
@@ -177,8 +176,6 @@ $(document).ready(function () {
             $("#wrong").text(wrong);
             $("#unanswered").text(unanswered);
         }
-
-        
 
         // Timer Start
         setTimeout(function () {
