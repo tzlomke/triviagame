@@ -154,7 +154,7 @@ $(document).ready(function () {
 
         // Displays Quiz on DOM, Hides Start Button
         $("#quiz").show();
-        $("#start").hide();
+        $(".start").hide();
 
         // Score Quiz
         function scoreQuiz() {

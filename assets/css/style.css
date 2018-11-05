@@ -80,7 +80,7 @@ h2 {
     font-weight: bolder;
 }
 
-#start {
+.start {
     height: 65vh;
     display: block;
     padding: 30px;
