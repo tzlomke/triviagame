@@ -3,11 +3,6 @@
     src: url('../fonts/SgtPeppersOutline.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-}
-
 html, 
 body {
     padding: 0px;
