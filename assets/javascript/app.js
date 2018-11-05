@@ -148,9 +148,35 @@ $(document).ready(function () {
 
     // Quiz Start
     $("#start").off("click").on("click", function () {
+        
+        // Timer
+        var number = 120;
+        var intervalId;
 
+        function run() {
+            clearInterval(intervalId);
+            invervalId = setInterval(decerement, 1000);
+        }
+
+        function decerement() {
+            number--;
+            $("#time").text(number);
+            if (number === 0) {
+                stop()
+            }
+        }
+
+        function stop() {
+            clearInterval(invervalId);
+            scoreQuiz();
+            $("#quiz").hide();
+            $("#stats").show();
+        };
+
+        run();
+        
         // Generate Quiz
-        generateQuiz()
+        generateQuiz();
 
         // Displays Quiz on DOM, Hides Start Button
         $("#quiz").show();
@@ -175,21 +201,11 @@ $(document).ready(function () {
             $("#right").text(right);
             $("#wrong").text(wrong);
             $("#unanswered").text(unanswered);
-        }
-
-        // Timer Start
-        setTimeout(function () {
-            scoreQuiz();
-            $("#quiz").hide();
-            $("#stats").show();
-            clearTimeout();
-        }, 120000);
+        };
 
         // Done Button
         $("#done").on("click", function () {
-            scoreQuiz();
-            $("#quiz").hide();
-            $("#stats").show();
+            stop();
         });
     })
 })
