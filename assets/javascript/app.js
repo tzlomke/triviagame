@@ -182,6 +182,7 @@ $(document).ready(function () {
             scoreQuiz();
             $("#quiz").hide();
             $("#stats").show();
+            clearTimeout();
         }, 120000);
 
         // Done Button

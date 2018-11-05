@@ -11,7 +11,6 @@
 html, 
 body {
     padding: 0px;
-    padding-bottom: 0px;
     font-family: Arial, Helvetica, sans-serif;
     color: #cccccc;
     font-family: sans-serif;
@@ -27,11 +26,13 @@ body {
 .jumbotron {
     height: 250px;
     padding: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-top: 0px;
     text-align: center;
-    background-image: url("../images/banner_background.jpg");
+    background-color: #F2C135;
+    background-image: url("../images/banner_background.png");
     background-repeat: no-repeat;
+    background-position: top, center;
     background-size: 100%;
     font-family: 'Sgt Pepper', sans-serif;
 }
@@ -62,6 +63,7 @@ body {
 
 #header {
     padding: 50px;
+    padding-top: 100px;
     vertical-align: center;
     color: white;
 }
@@ -73,7 +75,6 @@ body {
     color: #F2C135;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
 h2 {
@@ -82,24 +83,22 @@ h2 {
 }
 
 .start {
-    height: 65vh;
+    height: calc(100vh - 250px);
     display: block;
     padding: 30px;
     padding-top: 30vh;
     background: rgba(64, 224, 208, .5);
-    text-align: center;
-    margin-bottom: 20px;    
+    text-align: center;   
 }
 
 #stats {
-    height: 65vh;
+    height: calc(100vh - 250px);
     display: block;
     padding: 30px;
     padding-top: 140px;
     background: rgba(64, 224, 208, .5);
     color: #F2C135;
     text-align: center;
-    margin-bottom: 20px;
     font-size: 30px;
 }
 
