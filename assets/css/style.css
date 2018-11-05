@@ -42,7 +42,7 @@ body {
     text-align: left;
     padding: 30px;
     padding-top: 0px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .buttons {
@@ -76,6 +76,11 @@ body {
     color: #F2C135;
     text-align: center;
     font-weight: bold;
+}
+
+.timer {
+    color: #D35C3E;
+    opacity: .9;
 }
 
 h2 {
