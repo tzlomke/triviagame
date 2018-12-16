@@ -149,6 +149,13 @@ $(document).ready(function () {
     // Quiz Start
     $("#start").off("click").on("click", function () {
         
+        // Generate Quiz
+        generateQuiz();
+
+        // Displays Quiz on DOM, Hides Start Button
+        $("#quiz").show();
+        $(".start").hide();
+
         // Timer
         var number = 120;
         var intervalId;
@@ -174,13 +181,6 @@ $(document).ready(function () {
         };
 
         run();
-        
-        // Generate Quiz
-        generateQuiz();
-
-        // Displays Quiz on DOM, Hides Start Button
-        $("#quiz").show();
-        $(".start").hide();
 
         // Score Quiz
         function scoreQuiz() {
